@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>keyup इव्हेंट - Uppercase मध्ये</title>
+</head>
+<body>
+
+  <h2>तुमचं नाव लिहा (Uppercase मध्ये दिसेल):</h2>
+  <input type="text" id="nameInput" placeholder="तुमचं नाव टाइप करा...">
+  <p id="displayName"></p>
+
+  <script>
+    const nameInput = document.getElementById("nameInput");
+
+    nameInput.addEventListener("keyup", function () {
+      // यूजरने जे लिहिलंय ते uppercase मध्ये बदला
+      let name = nameInput.value.toUpperCase();
+
+      // खाली uppercase नाव दाखवा
+      document.getElementById("displayName").textContent = "तुमचं नाव: " + name;
+    });
+  </script>
+
+</body>
+</html>
